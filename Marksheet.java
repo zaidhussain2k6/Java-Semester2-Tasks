@@ -43,44 +43,39 @@ public class Marksheet {
         int totalMarks = ict + pf + ds + dld + oops;
         float Perc = (totalMarks * 100.0f) / 500;
 
-        // Output Section (Formatted)
-        System.out.println("\n=====================================");
-        System.out.println("            MARKSHEET                ");
-        System.out.println("=====================================");
+        // Output Section (Simple Format)
+        System.out.println("\n===============================");
+        System.out.println("           MARKSHEET           ");
+        System.out.println("===============================");
+        System.out.println("Name        : " + name);
+        System.out.println("Father Name : " + fatherName);
+        System.out.println("Department  : " + department);
+        System.out.println("Roll Number : " + rollNo);
+        System.out.println("Semester    : " + semester);
 
-        System.out.printf("%-20s: %s\n", "Name", name);
-        System.out.printf("%-20s: %s\n", "Father Name", fatherName);
-        System.out.printf("%-20s: %s\n", "Department", department);
-        System.out.printf("%-20s: %d\n", "Roll Number", rollNo);
-        System.out.printf("%-20s: %d\n", "Semester", semester);
+        System.out.println("-------------------------------");
+        System.out.println("ICT   : " + ict);
+        System.out.println("DLD   : " + dld);
+        System.out.println("OOPS  : " + oops);
+        System.out.println("DS    : " + ds);
+        System.out.println("PF    : " + pf);
+        System.out.println("-------------------------------");
+        System.out.println("Total Marks : " + totalMarks + "/500");
+        System.out.println("Percentage  : " + Perc + "%");
 
-        System.out.println("-------------------------------------");
-        System.out.printf("%-20s | %s\n", "Subject", "Marks");
-        System.out.println("-------------------------------------");
-        System.out.printf("%-20s | %d\n", "ICT", ict);
-        System.out.printf("%-20s | %d\n", "DLD", dld);
-        System.out.printf("%-20s | %d\n", "OOPS", oops);
-        System.out.printf("%-20s | %d\n", "DS", ds);
-        System.out.printf("%-20s | %d\n", "PF", pf);
-        System.out.println("-------------------------------------");
-
-        System.out.printf("%-20s: %d / 500\n", "Total Marks", totalMarks);
-        System.out.printf("%-20s: %.2f%%\n", "Percentage", Perc);
-
-        System.out.print("Grade: ");
         if (Perc >= 80) {
-            System.out.println("A1");
+            System.out.println("Grade       : A1");
         } else if (Perc >= 70) {
-            System.out.println("A");
+            System.out.println("Grade       : A");
         } else if (Perc >= 60) {
-            System.out.println("B");
+            System.out.println("Grade       : B");
         } else if (Perc >= 50) {
-            System.out.println("C");
+            System.out.println("Grade       : C");
         } else {
-            System.out.println("Fail :( ");
+            System.out.println("Grade       : Fail");
         }
 
-        System.out.println("=====================================");
+        System.out.println("===============================");
 
         scanner.close();
     }
