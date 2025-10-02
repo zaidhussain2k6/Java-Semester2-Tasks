@@ -8,7 +8,6 @@ public class Marksheet {
         int rollNo, semester;
         int ict, dld, oops, pf, ds;
 
-        // Input Section
         System.out.print("Enter Your Name: ");
         name = scanner.nextLine();
 
@@ -39,11 +38,9 @@ public class Marksheet {
         System.out.print("Enter Your PF Marks: ");
         pf = scanner.nextInt();
 
-        // Processing
         int totalMarks = ict + pf + ds + dld + oops;
         float Perc = (totalMarks * 100.0f) / 500;
 
-        // Output Section (Simple Format)
         System.out.println("\n===============================");
         System.out.println("           MARKSHEET           ");
         System.out.println("===============================");
