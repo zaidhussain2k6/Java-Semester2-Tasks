@@ -26,11 +26,11 @@ public class Calculator {
                 result = num1 - num2;
                 System.out.println("Result = " + result);
                 break;
-            case '/':
+            case '*':
                 result = num1 * num2;
                 System.out.println("Result = " + result);
                 break;
-            case '*':
+            case '/':
                 if(num2 != 0) {
                     result = num1 / num2;
                     System.out.println("Result = " + result);
